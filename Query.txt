@@ -1,0 +1,26 @@
+CREATE TABLE Users (
+  Id  int identity(1,1),
+  Name varchar(MAX)  NOT NULL,
+  About varchar(MAX),
+  PRIMARY KEY (Id)
+)
+
+INSERT INTO Users ( Name, About) VALUES
+('Kamil', 'HELLO, mam na imiê kamil'),
+('Tomek', null),
+('Zykfryd', 'Hello World :)');
+
+CREATE TABLE Posts (
+  Id  int identity(1,1),
+  UserId int NOT NULL,
+  Title varchar(MAX)  NOT NULL,
+  Description varchar(MAX) NOT NULL,
+  PRIMARY KEY (Id) 
+)
+
+INSERT INTO Posts (UserId, Title, Description) VALUES
+('1', 'Zachod s³oñca','zachod slonca latem'),
+('2', 'coœ', '404'),
+('2', 'fdd', 'framework driven development'),
+('1', 'moj piesek', 'pies'),
+('3', 'jac', 'e');
